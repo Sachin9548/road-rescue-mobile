@@ -1,0 +1,127 @@
+.contactus {
+  background-color: #f5f5f5;
+}
+
+/* contact form */
+/* Main container for the contact form section */
+.contactform {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #f5f5f5; /* Light background for contrast */
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto; /* Center the form on the page */
+  animation: fadeInUp 1s ease-in-out; /* Animation for fade in */
+}
+
+/* Left contact details section */
+.contactleftsection {
+  flex: 1;
+  font-size: 1.1rem;
+  color: rgb(32, 31, 31);
+}
+
+.contactleftsection p {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.contactleftsection .icon {
+  color: #f50353; /* Pink icon color */
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+/* Right contact form section */
+.contactrightsection {
+  flex: 1.5;
+}
+
+.contactrightsection h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #f50353;
+  box-shadow: 0px 4px 8px rgba(245, 3, 83, 0.1);
+}
+
+/* Submit button styling */
+form button {
+  background-color: #f50353;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+  background-color: #d10041;
+  transform: translateY(-2px);
+}
+
+.map-container {
+  max-width: 1200px; /* Adjust to fit your layout */
+  margin: 0 auto; /* Centers the map */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .contactform {
+    flex-direction: column;
+  }
+
+  .contactleftsection,
+  .contactrightsection {
+    width: 100%;
+  }
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.loading-message {
+  color: #f50353;
+  font-size: 1rem;
+  margin-top: 10px;
+  font-weight: bold;
+}

@@ -1,0 +1,80 @@
+/* Main container for the services section */
+.servicessection {
+  padding: 50px 20px;
+  /* background-image: url('https://mississaugatruckrepair.com/wp-content/uploads/2023/08/vehicle-mechanic-with-diagnostic-tool-laptop-working-truck-workshop_342744-1342.webp');
+   */
+   /* background-image: url('../../assets/n3.webp'); */
+   background-color: #f4f4f4;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white; /* Text color to contrast against the background */
+  text-align: center;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.servicessection h2 {
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  position: relative;
+  color: black;
+}
+
+/* Container for all services */
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+/* Individual service item */
+.service-item {
+  width: 30%;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark overlay background */
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.service-item a {
+  text-decoration: none;
+}
+
+.service-item:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Service content */
+.service-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #f5f5f5;
+}
+
+.service-content p {
+  font-size: 1rem;
+  color: #d3d3d3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-item {
+    width: 45%; /* Adjust width on tablet screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .service-item {
+    width: 100%; /* Full width for small mobile screens */
+  }
+  .servicessection {
+    width: 100%;
+  }
+
+  .servicessection h2 {
+    font-size: 2.2rem;
+  }
+}

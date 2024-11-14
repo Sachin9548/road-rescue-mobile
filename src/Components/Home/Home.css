@@ -1,0 +1,486 @@
+/* Home Banner - Desktop */
+.homebanner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Full width */
+  padding: 20px 0;
+  background-color: #f4f4f4; /* Light background */
+  margin: 0 auto;
+}
+
+/* Desktop Banner Image */
+.homebanner-img {
+  width: 100%;
+  max-width: 1920px; /* Limit the maximum width */
+  height: auto;
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+/* Mobile Banner Section (Initially hidden on larger screens) */
+.homebannermobile {
+  display: none;
+}
+
+/* Responsive adjustments for tablet devices */
+@media (max-width: 768px) {
+  .homebanner {
+    padding: 15px 0;
+  }
+
+  .homebanner-img {
+    max-width: 100%; /* Full width on tablets */
+  }
+}
+
+/* Mobile View - Show the mobile banner and hide the desktop banner */
+@media (max-width: 480px) {
+  /* Hide the desktop banner on mobile devices */
+  .homebanner {
+    display: none;
+  }
+
+  /* Show the mobile banner */
+  .homebannermobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    margin-top: 110px !important;
+
+  }
+
+  /* Mobile Banner Image */
+  .homebanner-img-mobile {
+    width: 100%;
+    max-width: 100%; /* Full width on mobile */
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+/* section1 */
+/* Main container for the section */
+.section1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 10%;
+  background-color: #f4f4f4; /* Optional background color */
+  gap: 40px; /* Spacing between left and right sections */
+  overflow: hidden;
+}
+
+/* Left side text section */
+.leftsection1detail {
+  flex: 1; /* Allows this section to take 50% of the space */
+  animation: fadeInLeft 1.5s ease; /* Animation for text content */
+}
+
+.leftsection1detail h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #333;
+  position: relative;
+  transition: color 0.3s ease; /* Hover effect for heading */
+}
+
+.leftsection1detail h1:hover {
+  color: #f50353; /* Heading changes color on hover */
+}
+
+.leftsection1detail p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #555;
+  animation: fadeInUp 1.5s ease 0.3s;
+}
+
+.leftsection1detail span {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #f50353;
+  animation: fadeInUp 1.5s ease 0.5s;
+}
+
+/* Right side image section */
+.section1right {
+  flex: 1; /* Allows this section to take 50% of the space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInRight 1.5s ease;
+}
+
+.section1-img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px; /* Rounding corners of the image */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Image animation */
+}
+
+.section1-img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+/* Keyframes for fade-in animations */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .section1 {
+    flex-direction: column; /* Stack content vertically on smaller screens */
+    padding: 30px 5%;
+  }
+
+  .leftsection1detail {
+    text-align: center;
+  }
+
+  .leftsection1detail h1 {
+    font-size: 2rem;
+  }
+
+  .leftsection1detail p {
+    font-size: 1.1rem;
+  }
+
+  .section1-img {
+    max-width: 100%; /* Make image full-width on smaller screens */
+  }
+
+  /* Adjust animations for mobile */
+  .leftsection1detail {
+    animation: fadeInUp 1.5s ease;
+  }
+
+  .section1right {
+    animation: fadeInUp 1.5s ease 0.3s;
+  }
+}
+
+@media (max-width: 480px) {
+  .section1 {
+    padding: 20px;
+  }
+
+  .leftsection1detail h1 {
+    font-size: 1.8rem;
+  }
+
+  .leftsection1detail p {
+    font-size: 1rem;
+  }
+
+  .leftsection1detail span {
+    font-size: 1rem;
+  }
+}
+
+/* section2 */
+
+/* Main container for the section */
+.section2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 10%;
+  background-color: #f4f4f4; /* Optional background color */
+  gap: 40px; /* Spacing between left and right sections */
+  overflow: hidden;
+}
+
+/* Left side image section */
+.section2left {
+  flex: 1; /* Allows this section to take 50% of the space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInLeft 1.5s ease; /* Animation for image content */
+}
+
+.section2-img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px; /* Rounding corners of the image */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Image animation */
+}
+
+.section2-img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+/* Right side text section */
+.leftsection2detail {
+  flex: 1; /* Allows this section to take 50% of the space */
+  animation: fadeInRight 1.5s ease; /* Animation for text content */
+}
+
+.leftsection2detail h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #333;
+  position: relative;
+  transition: color 0.3s ease; /* Hover effect for heading */
+}
+
+.leftsection2detail h1:hover {
+  color: #f50353; /* Heading changes color on hover */
+}
+
+.leftsection2detail p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #555;
+  animation: fadeInUp 1.5s ease 0.3s;
+}
+
+.leftsection2detail span {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #f50353;
+  animation: fadeInUp 1.5s ease 0.5s;
+}
+
+/* Keyframes for fade-in animations */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .section2 {
+    flex-direction: column-reverse; /* Stack content vertically on smaller screens with the text first */
+    padding: 30px 5%;
+  }
+
+  .leftsection2detail {
+    text-align: center;
+  }
+
+  .leftsection2detail h1 {
+    font-size: 2rem;
+  }
+
+  .leftsection2detail p {
+    font-size: 1.1rem;
+  }
+
+  .section2-img {
+    max-width: 100%; /* Make image full-width on smaller screens */
+  }
+
+  /* Adjust animations for mobile */
+  .section2left {
+    animation: fadeInUp 1.5s ease;
+  }
+
+  .leftsection2detail {
+    animation: fadeInUp 1.5s ease 0.3s;
+  }
+}
+
+@media (max-width: 480px) {
+  .section2 {
+    padding: 20px;
+  }
+
+  .leftsection2detail h1 {
+    font-size: 1.8rem;
+  }
+
+  .leftsection2detail p {
+    font-size: 1rem;
+  }
+
+  .leftsection2detail span {
+    font-size: 1rem;
+  }
+}
+
+/* gallery */
+/* Main container for the gallery section */
+.gallery {
+  background-color: #d3d3d3; /* Grey background */
+  padding: 50px 20px;
+  text-align: center;
+  width: 98%;
+  margin: 25px auto;
+  border-radius: 10px;
+}
+
+.gallery h2 {
+  font-size: 2.8rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+/* Container for the gallery images */
+.gallery-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px; /* Spacing between images */
+}
+
+/* Individual image containers */
+.leftgalleryimg,
+.rightgalleryimg {
+  flex: 1; /* Equal width for both images */
+  max-width: 48%; /* Ensure images don’t exceed half the available space */
+}
+
+.gallery-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* Optional: Rounded corners */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.03); /* Slight zoom effect on hover */
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Responsive design for tablets */
+@media (max-width: 768px) {
+  .gallery-container {
+    flex-direction: column;
+  }
+
+  .leftgalleryimg,
+  .rightgalleryimg {
+    max-width: 100%; /* Make images full width */
+    margin-bottom: 20px;
+  }
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 480px) {
+  .gallery-container {
+    padding: 0 10px; /* Add some padding to give breathing room */
+  }
+
+  .gallery-img {
+    width: 90%; /* Reduce image width on mobile to avoid stretching */
+    margin: 0 auto; /* Center the image */
+    max-width: 100%; /* Ensure images don't exceed their container */
+  }
+
+  .gallery h2 {
+    font-size: 2.2rem;
+  }
+}
+
+/* brand section css */
+/* Main container for the brand section */
+.brandsection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #fff; /* Light grey background for contrast */
+  flex-wrap: wrap; /* Allow the logos to wrap on smaller screens */
+  gap: 20px; /* Space between logos */
+}
+
+/* Style for the brand logos */
+.brand-logo {
+  max-width: 150px;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for the brand logos */
+.brand-logo:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+  /* box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); */
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 768px) {
+  .brand-logo {
+    max-width: 120px; /* Reduce logo size on tablets and mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-logo {
+    max-width: 100px; /* Further reduce logo size on small mobile screens */
+  }
+}
+
+.homebanner {
+margin-top: 70px !important;
+}

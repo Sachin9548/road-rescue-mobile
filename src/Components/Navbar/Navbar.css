@@ -1,0 +1,186 @@
+/* Styling for the navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  /* border-bottom: 2px solid #f50353; */
+  /* position: fixed;
+  width: 100%; */
+}
+.mobilecall{
+  display: none;
+}
+.navbar-brand {
+  font-size: 18px;
+  font-weight: bold;
+}
+.navbar-brand a {
+  color: black;
+  text-decoration: none;
+}
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.navbar-links li {
+  position: relative;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+.navbar-links a:hover {
+  color: #f50353;
+}
+
+/* Call button */
+.call-btn {
+  background-color: #f50353;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.call-btn:hover {
+  background-color: #f50353;
+}
+
+/* Hamburger menu icon */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Close icon */
+.close {
+  font-size: 28px;
+}
+.logoweb{
+  width: 280px;
+}
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+  .navbar-brand {
+    font-size: 16px;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-links.open {
+    display: flex;
+    margin-top: 20px;
+  }
+
+  .navbar-links li {
+    margin: 15px 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .call-btn {
+    background-color: #f50353;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    text-align: center;
+  }
+}
+/* Desktop and default styles for the dropdown menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  width: 200px; /* Increased width for desktop */
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown-content a:hover {
+  background-color: #f50353;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/* Mobile specific styles */
+@media (max-width: 768px) {
+  .dropdown-content {
+    width: 250px; /* Increased width for mobile */
+    text-align: center;
+  }
+  .dropdown-content a:hover {
+    background-color: #f50353;
+    color: white;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .logoweb{
+    width: 220px;
+  }
+  .mobilecall{
+    display: block;
+    list-style: none;
+    margin: 0 auto;
+    padding: 10px 0px;
+  }
+  .desktopcall{
+    display: none;
+  }
+
+}
+
+/* Styling for the navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Keeps the navbar above other elements */
+}
+
+
+/* Add a top margin to the main content */
+/* .main-content {
+  margin-top: 80px; 
+} */
